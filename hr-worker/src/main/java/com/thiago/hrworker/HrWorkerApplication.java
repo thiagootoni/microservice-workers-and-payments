@@ -1,13 +1,20 @@
 package com.thiago.hrworker;
 
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class HrWorkerApplication {
+public class HrWorkerApplication implements CommandLineRunner  {
 
 	public static void main(String[] args) {
 		SpringApplication.run(HrWorkerApplication.class, args);
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+		System.out.println("Hr-worker no ar!");
+		
 	}
 
 }
