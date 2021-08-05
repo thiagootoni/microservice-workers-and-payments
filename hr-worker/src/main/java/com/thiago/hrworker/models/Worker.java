@@ -1,6 +1,9 @@
-package com.thiago.hrworker.model;
+package com.thiago.hrworker.models;
 
-public class Worker {
+import java.io.Serializable;
+
+public class Worker implements Serializable{
+	private static final long serialVersionUID = 1L;
 	
 	private Long id;
 	private String name;
