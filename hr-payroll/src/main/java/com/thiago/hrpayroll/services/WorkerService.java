@@ -11,6 +11,8 @@ import org.springframework.web.client.RestTemplate;
 import com.thiago.hrpayroll.feignclients.WorkerFeignClient;
 import com.thiago.hrpayroll.models.Worker;
 
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+
 @Service
 public class WorkerService {
 	
@@ -23,6 +25,7 @@ public class WorkerService {
 	@Autowired
 	private WorkerFeignClient workerFeignClient;
 	
+	@CircuitBreaker(name = "workerClient")
 	public Worker findByid(Long idWorker) {
 		
 		/*
