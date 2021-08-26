@@ -19,8 +19,10 @@ public class WorkerService {
 	@Autowired
 	RestTemplate restTemplate;
 	
+	/*
 	@Value("${hr-worker.host}")
 	private String workerHost;
+	*/
 	
 	@Autowired
 	private WorkerFeignClient workerFeignClient;
